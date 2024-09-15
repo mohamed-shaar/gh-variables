@@ -1,6 +1,5 @@
 name: Auto Create Branch
 on:
-    push:
     workflow_dispatch:
     schedule:
         - cron: '0 * * * *'
