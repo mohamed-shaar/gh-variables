@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run server
-        run: npm run ci-start && npx wait-on --timeout 2000 http://127.0.0.1:${{env.PORT}}
+        run: npm run ci-start && npx wait-on -t 3s http://127.0.0.1:${{env.PORT}}
       - name: Test code
         run: npm run test
       - name: Output information
