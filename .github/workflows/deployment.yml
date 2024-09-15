@@ -5,16 +5,11 @@ on:
       - main
       - dev
 env:
-    MONGODB_DB_NAME: gh-demo
-    MONGODB_USERNAME: mohamedsamyelshaar
-    MONGODB_CLUSTER_ADDRESS: cluster0.cuhrl.mongodb.net
-    MONGODB_PASSWORD: zQyCMVqgc3itiAvh
-    PORT: 8080
-    # MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
-    # MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-    # MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
-    # MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
-    # PORT: ${{ secrets.PORT }}
+    MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+    MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+    MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+    MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+    PORT: ${{ secrets.PORT }}
 jobs:
   test:
     runs-on: ubuntu-latest
