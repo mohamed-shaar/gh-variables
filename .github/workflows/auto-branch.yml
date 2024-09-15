@@ -22,4 +22,4 @@ jobs:
                 git checkout -b test-branch-new
                 git branch
                 git remote set-url origin https://x-access-token:$PAT@github.com/mohamed-shaar/gh-variables.git
-                git push --set-upstream origin test-branch
+                git push --set-upstream origin test-branch-new
