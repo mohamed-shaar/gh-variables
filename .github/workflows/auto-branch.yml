@@ -19,7 +19,7 @@ jobs:
               run: |
                 git config --global user.email "mohamed.samy.elshaar@gmail.com"
                 git config --global user.name "Mohamed ElShaar"
-                git checkout -b test-branch
+                git checkout -b test-branch-new
                 git branch
                 git remote set-url origin https://x-access-token:$PAT@github.com/mohamed-shaar/gh-variables.git
                 git push --set-upstream origin test-branch
