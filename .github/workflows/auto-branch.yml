@@ -14,8 +14,5 @@ jobs:
         steps:
             - name: Get Code
               uses: actions/checkout@v3
-            - name: Change branch
-              run: git checkout -b test-branch
-            - name: Push Branch
-            #   run: git push https://$GH_USERNAME:$GH_PASSWORD@gh-variables/file.git test-branch
-              run: git push -u origin test-branch
+              with:
+                ref: test-branch01
