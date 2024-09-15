@@ -17,4 +17,4 @@ jobs:
             - name: Change branch
               run: git checkout -b test-branch
             - name: Push Branch
-              run: git push https://$GH_USERNAME:$GH_PASSWORD/github.com/mohamed-shaar/gh-variables.git test-branch
+              run: git push https://$GH_USERNAME:$GH_PASSWORD@gh-variables/file.git test-branch
