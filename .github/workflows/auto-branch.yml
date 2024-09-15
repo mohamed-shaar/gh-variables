@@ -17,7 +17,7 @@ jobs:
                 ref: main
             - name: Create date variable
               run: |
-                future_date=$(date -d "+1 week" +"%Y-%m-%d")
+                future_date=$(date -d "next Thursday" +"%Y-%m-%d")
                 echo "FUTURE_DATE=$future_date" >> $GITHUB_ENV
             - name: Use future date variable
               run: |
