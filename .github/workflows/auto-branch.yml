@@ -19,7 +19,5 @@ jobs:
             - name: Create branch and push
               run: |
                 git checkout -b test-branch
-                git config user.name "mohamed-shaar"
-                git config user.email "34490025+mohamed-shaar@users.noreply.github.com"
-                git push --set-upstream origin test-branch
+                git branch
 
