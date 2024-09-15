@@ -1,0 +1,17 @@
+name: Auto Create Branch
+on:
+    push:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 * * * *'
+        - cron: '0 0 * * 1'
+jobs:
+    create:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v3
+            - name: Change branch
+              run: git switch test-branch
+            - name: Push Branch
+              run: git push origin test-branch
