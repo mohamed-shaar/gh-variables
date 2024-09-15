@@ -9,8 +9,7 @@ jobs:
     create:
         runs-on: ubuntu-latest
         env:
-            GH_USERNAME: ${{secrets.GH_USERNAME}}
-            GH_PASSWORD: ${{secrets.GH_PASSWORD}}
+            PAT: ${{ secrets.PAT }}
         steps:
             - name: Get Code
               uses: actions/checkout@v3
@@ -18,6 +17,9 @@ jobs:
                 ref: main
             - name: Create branch and push
               run: |
+                git config --global user.email "mohamed.samy.elshaar@gmail.com"
+                git config --global user.name "Mohamed ElShaar"
                 git checkout -b test-branch
                 git branch
-
+                git remote set-url origin https://x-access-token:$PAT@github.com/mohamed-shaar/gh-variables.git
+                git push
