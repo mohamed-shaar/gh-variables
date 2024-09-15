@@ -17,16 +17,16 @@ jobs:
                 ref: main
             - name: Create date variable
               run: |
-                next_thursday=$(date -d "+1 week" +"%Y-%m-%d")
-                echo "FUTURE_DATE=$next_thursday" >> $GITHUB_ENV
+                future_date=$(date -d "+1 week" +"%Y-%m-%d")
+                echo "FUTURE_DATE=$future_date" >> $GITHUB_ENV
             - name: Use future date variable
               run: |
-                echo "The future date is: $next_thursday"
+                echo "The future date is: $FUTURE_DATE"
             - name: Create branch and push
               run: |
                 git config --global user.email "mohamed.samy.elshaar@gmail.com"
                 git config --global user.name "Mohamed ElShaar"
-                git checkout -b test-branch-$next_thursday
+                git checkout -b test-branch-$FUTURE_DATE
                 git branch
                 git remote set-url origin https://x-access-token:$PAT@github.com/mohamed-shaar/gh-variables.git
-                git push --set-upstream origin test-branch-$next_thursday
+                git push --set-upstream origin test-branch-$FUTURE_DATE
